@@ -17,8 +17,8 @@
         <menus>
           <Menu fx:id="FileMenuBar" mnemonicParsing="false" text="File">
             <items>
-                  <MenuItem fx:id="openButton" mnemonicParsing="false" text="Open" />
-                  <MenuItem fx:id="saveButton" mnemonicParsing="false" text="Save" />
+                  <MenuItem fx:id="openButton" mnemonicParsing="false" onAction="#openList" text="Open" />
+                  <MenuItem fx:id="saveButton" mnemonicParsing="false" onAction="#saveList" text="Save" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Sort">
@@ -43,19 +43,19 @@
       </AnchorPane>
       <TableView fx:id="tableview" prefHeight="407.0" prefWidth="603.0">
         <columns>
-          <TableColumn id="nameColumn" fx:id="eventColumn" prefWidth="175.0" text="Item Name" />
-            <TableColumn id="dateColumn" fx:id="dateColumn" prefWidth="219.0" text="Serial Number" />
-            <TableColumn id="descColumn" fx:id="descColumn" prefWidth="209.0" text="Price" />
+          <TableColumn id="nameColumn" fx:id="eventColumn" onEditCommit="#changeName" prefWidth="175.0" text="Item Name" />
+            <TableColumn id="dateColumn" fx:id="dateColumn" onEditCommit="#changeSerial" prefWidth="219.0" text="Serial Number" />
+            <TableColumn id="descColumn" fx:id="descColumn" onEditCommit="#changePrice" prefWidth="209.0" text="Price" />
         </columns>
       </TableView>
       <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="102.0" prefWidth="600.0">
          <children>
-            <Button fx:id="addButton" layoutX="25.0" layoutY="14.0" mnemonicParsing="false" text="Add " textAlignment="CENTER" />
-            <TextField fx:id="eventTextField" layoutX="93.0" layoutY="16.0" prefHeight="26.0" prefWidth="122.0" promptText="Enter Item Name" />
-            <TextField fx:id="descTextField" layoutX="384.0" layoutY="16.0" prefHeight="26.0" prefWidth="201.0" promptText="Price" />
-            <Button layoutX="25.0" layoutY="55.0" mnemonicParsing="false" text="Delete" />
-            <Button fx:id="clearList" layoutX="93.0" layoutY="55.0" mnemonicParsing="false" text="Clear List" />
-            <TextField layoutX="226.0" layoutY="17.0" promptText="Serial Number" />
+            <Button fx:id="addButton" layoutX="25.0" layoutY="14.0" mnemonicParsing="false" onAction="#buttonAdd" text="Add " textAlignment="CENTER" />
+            <TextField fx:id="nameTextField" layoutX="93.0" layoutY="16.0" prefHeight="26.0" prefWidth="122.0" promptText="Enter Item Name" />
+            <TextField fx:id="priceTextField" layoutX="384.0" layoutY="16.0" prefHeight="26.0" prefWidth="201.0" promptText="Price" />
+            <Button fx:id="deleteButton" layoutX="25.0" layoutY="55.0" mnemonicParsing="false" onAction="#deleteItem" text="Delete" />
+            <Button fx:id="clearList" layoutX="93.0" layoutY="55.0" mnemonicParsing="false" onAction="#clearList" text="Clear List" />
+            <TextField fx:id="serialNumText" layoutX="226.0" layoutY="17.0" promptText="Serial Number" />
          </children>
       </AnchorPane>
    </items>

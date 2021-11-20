@@ -1,0 +1,34 @@
+@startuml
+class FXMLController
+{
+    --methods--
+    +saveList
+    +openList
+    +clearList
+    +changeName
+    +changeSerial
+    +changePrice
+    +buttonAdd
+    +deleteItem
+}
+
+class EditItem
+{
+    --methods--
+}
+
+class ListItem
+{
+    observableList
+}
+
+class InventoryManagementApplication
+{
+    --methods--
+}
+
+class inventoryEditor
+{
+    --methods--
+}
+@enduml
