@@ -6,6 +6,11 @@ This is an Inventory application created with the use of JavaFx and SceneBuilder
 
 ## User Guide
 
+###Format Guide
+name - letters only (EX. xbox)
+Serial - A-XXX-XXX-XXX (A is any letter uppercase or lowercase) (X are numbers 0-9) (Ex. A-123-123-123)
+Price - Must be a number and can be a decimal (Ex. 100.12)
+
 ### Adding Items 
 To add to the list enter the item name (limited to 256 Chars), serial number, and price <br/>
 The Item should be added to the table view located right above the bottom menu
@@ -29,7 +34,8 @@ The file directory chooser will open and simply select the .txt file that you wo
 ### Editing the List
 You can edit existing items within the list by double clicking the item you would like to edit <br/>
 A textfield will open of which you can enter your edit. Make sure to press Enter to finish the edit <br/>
-The date can be editted by simply selecting a new one through the date picker <br/>
+There are restrictions placed on what can be entered. Make sure that there are no duplicated items<br/>
+Make sure that the text fields follow the specific format otherwise they will not update<br/>
 
 ### Filtering the List
 #### SearchBar
