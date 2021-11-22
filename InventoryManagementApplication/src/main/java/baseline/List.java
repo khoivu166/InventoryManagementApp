@@ -6,12 +6,7 @@ import javafx.collections.ObservableList;
 public class List
 {
     //create an observable list
-    ObservableList<inventoryEditor> inventoryList = FXCollections.observableArrayList();
-    //create method to add to observable list
-     public void addList (inventoryEditor inventory)
-     {
-         //add to the list
-     }
+   protected static ObservableList<inventoryEditor> inventoryList = FXCollections.observableArrayList();
 
     public ObservableList<inventoryEditor> getInventoryList()
     {

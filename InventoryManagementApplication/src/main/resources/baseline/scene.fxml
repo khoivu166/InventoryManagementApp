@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
@@ -9,7 +10,6 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Text?>
 
 <SplitPane dividerPositions="0.5, 0.5, 0.5" orientation="VERTICAL" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="baseline.FXMLController">
    <items>
@@ -17,8 +17,11 @@
         <menus>
           <Menu fx:id="FileMenuBar" mnemonicParsing="false" text="File">
             <items>
-                  <MenuItem fx:id="openButton" mnemonicParsing="false" onAction="#openList" text="Open" />
-                  <MenuItem fx:id="saveButton" mnemonicParsing="false" onAction="#saveList" text="Save" />
+                  <MenuItem fx:id="openButton" mnemonicParsing="false" onAction="#openList" text="Open TSV" />
+                  <MenuItem fx:id="openFileHTML" mnemonicParsing="false" onAction="#openListHTML" text="Open HTML" />
+                  <MenuItem fx:id="saveButton" mnemonicParsing="false" onAction="#saveList" text="Save as TSV" />
+                  <MenuItem fx:id="saveButtonHTML" mnemonicParsing="false" onAction="#saveListHTML" text="Save as HTML" />
+                  <MenuItem fx:id="saveButtonJSON" mnemonicParsing="false" onAction="#saveListJSON" text="Save as JSON" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Sort">
@@ -38,14 +41,14 @@
       <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="33.0" prefWidth="603.0">
          <children>
             <TextField fx:id="searchBox" layoutX="440.0" layoutY="3.0" promptText="Search" />
-            <Text layoutX="14.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Status" wrappingWidth="207.13671875" />
+            <Label fx:id="errorLabel" layoutX="23.0" layoutY="8.0" prefHeight="17.0" prefWidth="321.0" text="No Errors" />
          </children>
       </AnchorPane>
       <TableView fx:id="tableview" prefHeight="407.0" prefWidth="603.0">
         <columns>
-          <TableColumn id="nameColumn" fx:id="eventColumn" onEditCommit="#changeName" prefWidth="175.0" text="Item Name" />
-            <TableColumn id="dateColumn" fx:id="dateColumn" onEditCommit="#changeSerial" prefWidth="219.0" text="Serial Number" />
-            <TableColumn id="descColumn" fx:id="descColumn" onEditCommit="#changePrice" prefWidth="209.0" text="Price" />
+          <TableColumn id="nameColumn" fx:id="nameColumn" onEditCommit="#changeName" prefWidth="175.0" text="Item Name" />
+            <TableColumn id="dateColumn" fx:id="serialColumn" onEditCommit="#changeSerial" prefWidth="219.0" text="Serial Number" />
+            <TableColumn id="descColumn" fx:id="priceColumn" onEditCommit="#changePrice" prefWidth="209.0" text="Price" />
         </columns>
       </TableView>
       <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="102.0" prefWidth="600.0">

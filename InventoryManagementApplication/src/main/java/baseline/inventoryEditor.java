@@ -2,12 +2,16 @@ package baseline;
 
 import javafx.beans.property.SimpleFloatProperty;
 import javafx.beans.property.SimpleStringProperty;
+import javafx.scene.control.TextFormatter;
+
+import java.util.function.UnaryOperator;
 
 public class inventoryEditor
 {
     private SimpleStringProperty name;
     private SimpleStringProperty serialNum;
     private SimpleStringProperty price;
+
 
     public inventoryEditor (String name, String serialNum, String price)
     {
@@ -16,6 +20,7 @@ public class inventoryEditor
         this.price = new SimpleStringProperty(price);
     }
 
+    //setters and getters
     public String getName()
     {
         return name.get();

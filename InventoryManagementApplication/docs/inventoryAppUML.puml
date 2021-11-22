@@ -15,20 +15,75 @@ class FXMLController
 class EditItem
 {
     --methods--
+    +editName
+    +editSerial
+    +editPrice
 }
 
 class ListItem
 {
-    observableList
+    --attributes--
+    +observableList
+    --methods--
+    +getInventoryList
 }
 
 class InventoryManagementApplication
 {
     --methods--
+    +start
+    +main
 }
 
 class inventoryEditor
 {
+    --constructors--
+    this.name = new SimpleStringProperty(name);
+    this.serialNum = new SimpleStringProperty(serialNum);
+    this.price = new SimpleStringProperty(price);
     --methods--
+    +getName
+    +getSerialNum
+    +getPrice
+    +setName
+    +setSerialNum
+    +setPrice
 }
+class saveListFile
+{
+    --methods--
+    +openFile
+    +openData
+}
+
+class saveListFileHTML
+{
+    --methods--
+     +openFile
+     +openData
+}
+
+class openListFile
+{
+    --methods--
+    +save
+    +saveList
+}
+
+class openListFileHTML
+{
+        --methods--
+        +save
+        +saveList
+}
+
+InventoryManagementApplication <|-- FXMLController
+FXMLController <|-- ListItem
+FXMLController <|-- EditItem
+FXMLController <|-- saveListFile
+FXMLController <|-- saveListFileHTML
+FXMLController <|-- openListFile
+FXMLController <|-- inventoryEditor
+FXMLController <|-- openListFileHTML
+
 @enduml
