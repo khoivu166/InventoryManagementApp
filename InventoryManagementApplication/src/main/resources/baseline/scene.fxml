@@ -24,18 +24,6 @@
                   <MenuItem fx:id="saveButtonJSON" mnemonicParsing="false" onAction="#saveListJSON" text="Save as JSON" />
             </items>
           </Menu>
-          <Menu mnemonicParsing="false" text="Sort">
-            <items>
-              <MenuItem fx:id="ShowCompleted" mnemonicParsing="false" text="Sort By Value  " />
-                  <MenuItem mnemonicParsing="false" text="Sort by Serial Number" />
-                  <MenuItem mnemonicParsing="false" text="Sort By Name" />
-            </items>
-          </Menu>
-            <Menu mnemonicParsing="false" text="Help">
-              <items>
-                <MenuItem fx:id="openLink" mnemonicParsing="false" text="User Guide" />
-              </items>
-            </Menu>
         </menus>
       </MenuBar>
       <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="33.0" prefWidth="603.0">
